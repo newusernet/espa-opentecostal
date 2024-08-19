@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oração - Igreja Pentecostal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #000000, #363636, #00BFFF, #0000CD);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #fff;
+        }
+
+        header {
+            background: linear-gradient(45deg, #000000, #363636, #00BFFF, #0000CD);
+            color: #fff;
+            padding: 10px 0;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header img {
+            height: 140px;
+            margin-left: 20px;
+            border-radius: 10%;
+            border: 1px solid white;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 20px;
+            padding: 10px 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+        }
+
+        section {
+            padding: 100px 0;
+            margin-top: 70px;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .contact-form {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .contact-form button {
+            background-color: #25D366;
+            color: #fff;
+            font-size: 1.2em;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #128C7E;
+        }
+
+        .social-media {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .social-media a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 2em;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+
+        .social-media a:hover {
+            color: #bbb;
+        }
+
+        footer {
+            background: linear-gradient(45deg, #000000, #363636, #00BFFF, #0000CD);
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            width: 100%;
+        }
+
+        /* Estilos responsivos */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-form {
+                background-color: rgba(255, 255, 255, 0.1);
+                padding: 30px;
+                font-size: 2.7em;
+                border-radius: 10px;
+                box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+            }
+
+            header img {
+                height: 150px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+
+            nav ul li a {
+                font-size: 1.3em;
+                font-weight: bold;
+            }
+
+            section {
+                padding: 130px 20px;
+                margin-top: 220px;
+            }
+
+            h2 {
+                font-size: 2em;
+                margin-bottom: 10px;
+                text-align: center;
+                color: #fff;
+            }
+
+            .contact-form button {
+                font-size: 1em;
+                padding: 10px 20px;
+                font-weight: bold;
+            }
+
+            .social-media a {
+                font-size: 2.7em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <img src="images/logo.jpeg" alt="Logo da Igreja Pentecostal">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="https://www.bibliaon.com/">Biblia & Salmos</a></li>
+                    <li><a href="jovens.html">Grupo de Jovens</a></li>
+                    <li><a href="upa.html">Projeto UPA</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="contato">
+        <div class="container">
+            <h2>Envie Seu Pedido de Oração!</h2>
+            <div class="contact-form">
+                <form id="contactForm">
+                    <input type="text" id="name" placeholder="Seu Nome" required>
+                    <input type="tel" id="phone" placeholder="Seu Telefone" required>
+                    <textarea id="message" rows="5" placeholder="Sua oração aqui" required></textarea>
+                    <button type="button" onclick="sendMessage()">Enviar Pedido</button>
+                </form>
+            </div>
+            <div class="social-media">
+                <a href="https://www.instagram.com/espacopentecostal?igsh=MWxrcHk2eGZkbDVtMw==" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/espacopentecostal?mibextid=qi2Omg&rdid=CN5xt7NSAdvF1XGY&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2FQw2K4eEjnWtAxJ1s%2F%3Fmibextid%3Dqi2Omg" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Igreja Pentecostal. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+      function sendMessage() {
+        const name = document.getElementById('name').value;
+        const phone = document.getElementById('phone').value;
+        const message = document.getElementById('message').value;
+
+        if (name && phone && message) {
+            const url = `https://wa.me/5541987251723?text=${encodeURIComponent(
+                `Nome: ${name}\nTelefone: ${phone}\nPedido de Oração: ${message}`
+            )}`;
+            
+            window.open(url, '_blank').focus();
+        } else {
+            alert('Por favor, preencha todos os campos antes de enviar.');
+        }
+    }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espaço UPA - Visitas Hospitalares</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos gerais */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #000000, #363636, #00BFFF, #0000CD);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(45deg, #000000, #363636, #00BFFF, #0000CD);
+            color: #fff;
+            padding: 10px 0;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header img {
+            height: 140px;
+            margin-left: 20px;
+            border-radius: 10%;
+            border: 1px solid white;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 10px 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+        }
+
+        .banner {
+            background-image: url('./images/bannerupa4.png'); /* Imagem específica para o Espaço UPA */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 180px 0;
+            margin-top: 70px;
+        }
+
+        .banner h1 {
+            font-size: 3em;
+            margin-bottom: 30px;
+            color: green;
+            background-color: white;
+            
+
+        }
+
+        .banner p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            color: green;
+            background-color: white;
+           
+        }
+
+        .whatsapp-button {
+            display: inline-block;
+            background-color: #25D366;
+            color: #fff;
+            font-size: 1.1em;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .whatsapp-button:hover {
+            background-color: #128C7E;
+        }
+
+        .content-section {
+            padding: 60px 0;
+            background-color: #fff;
+            color: #333;
+            text-align: center;
+        }
+
+        .content-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #00008B;
+        }
+
+        .content-section p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .image-gallery {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .image-gallery img {
+            width: 300px;
+            height: 200px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .image-gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background: linear-gradient(45deg, #000000, #363636, #00BFFF, #0000CD);
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .social-links {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 10px;
+        }
+
+        .social-links li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .social-links li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .social-links li a:hover {
+            color: #bbb;
+        }
+
+        /* Estilos responsivos */
+        /* Estilos responsivos */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header img {
+        height: 150px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .banner {
+        padding: 280px 20px 150px; /* Aumentar o padding superior */
+    }
+
+    .banner h1 {
+        font-size: 2.5em;
+        margin-top: 20px; /* Adicionar margem superior para separar do header */
+        background-color: white;
+    }
+
+    .banner p {
+        font-size: 1.5em;
+        background-color: white;
+    }
+
+    .whatsapp-button {
+        font-size: 1.2em;
+        padding: 10px 20px;
+        font-weight: bold;
+    }
+
+    .content-section h2 {
+        font-size: 2em;
+    }
+
+    .content-section p {
+        font-size: 1.1em;
+    }
+
+    .image-gallery img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <img src="images/logoupa1.jpeg" alt="Logo da Igreja Pentecostal">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="https://www.bibliaon.com/">Biblia & Salmos</a></li>
+                    <li><a href="jovens.html">Grupo de Jovens</a></li>
+                    <li><a href="oracao.html">Pedido de Oração</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="inicio" class="banner">
+        <div class="container">
+            <h1>Projeto UPA</h1>
+            <p>UNIDADE DE PRONTO ATENDIMENTO PARA A SALVAÇÃO</p>
+            <a href="https://wa.me/554187251723" class="whatsapp-button">Contate-nos via WhatsApp</a>
+        </div>
+    </section>
+
+    <section id="sobre" class="content-section">
+        <div class="container">
+            <h2>Sobre o Projeto</h2>
+            <p>O projeto UPA’S é embrionário de um antigo projeto chamado REVOCRISTO, um grupo de
+jovens se reuniam na cidade de Mogi das Cruzes para evangelizar na porta do HOSPITAL LUZIA
+DE PINHO MELO, conhecido como SUS, deste projeto, destacou-se grandes líderes que hoje
+são pastores, e tambémalgumas Igrejas nasceram na porta deste hospital, como é o caso do
+Espaço Pentecostal –Vila Margarida em Itaquaquecetuba.
+Ao chegar em Curitiba e a Igreja ter tomado forma e disposição, o Pastor Wagner Teruel,
+juntamente com sua equipe de ministros decidiram colocar em pratica a ideia vencedora que
+havia sido o REVOCRISTO, agora em um novo formato e nome o UPA’S – UNIDADE DE PRONTO
+ATENDIMENTO PARA A SALVAÇÃO
+Estamos evangelizando, estamos orando, pregando e distribuindo um lanche especial para os
+acompanhantes, pacientes e trabalhadores do UPA, desta forma estamos certos de que
+estamos cumprindo o IDE que o Senhor nos convocou.</br>
+Se você gostou do projeto, tem trêsformas que você pode participar e não importa a cidade
+que você esteja:</br>
+1 – Monte em sua Igreja um grupo de oração por este projeto e ore uma vez por
+semana para que Deus nos use poderosamente para ganhar almas.</br>
+2- Venha participar com a gente, temos muito que fazer a seara é grande e
+poucos são os ceifeiros.</br>
+3 – <b>Oferte, a luta é muito grande para podermos alimentar as pessoas ali, até
+hoje, o Senhor não nos desamparou, mas com sua ajuda tudo pode ficar mais
+fácil,faça um pix de qualquer valor agora mesmo para
+espacopentecostal2022@gmail.com</b></br>
+Voce também pode nos contatar via Whatsapp, clicando no botão logo acima, solicitando mais informações e relatóriosmsobre este
+importante projeto.</p>
+        </div>
+    </section>
+
+    <section id="galeria" class="content-section">
+        <div class="container">
+            <h2>Imagens do Projeto</h2>
+            <div class="image-gallery">
+                <img src="gpupa/img1.jpeg" alt="Visita Hospitalar 1">
+                <img src="gpupa/img2.jpeg" alt="Visita Hospitalar 2">
+                <img src="gpupa/img3.jpeg" alt="Visita Hospitalar 3">
+                <img src="gpupa/img4.jpeg" alt="Visita Hospitalar 3">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/espacopentecostal?mibextid=qi2Omg&rdid=CN5xt7NSAdvF1XGY&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2FQw2K4eEjnWtAxJ1s%2F%3Fmibextid%3Dqi2Omg">Facebook</a></li>
+                <li><a href="https://www.instagram.com/espacopentecostal?igsh=MWxrcHk2eGZkbDVtMw==">Instagram</a></li>
+                <li><a href="https://www.youtube.com/@espacopentecostal5016">YouTube</a></li>
+            </ul>
+            <p>&copy; 2024 Igreja Pentecostal. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Espaço Pentecostal - Igreja da Família Unicista em Curitiba, PR. Conheça nossa história, nossas crenças e participe das nossas atividades. Contate-nos via WhatsApp!">
+    <meta name="keywords" content="Igreja Pentecostal, Espaço Pentecostal, Igreja Unicista, Curitiba, Família Cristã, Batismo, Espírito Santo, Fé Cristã, Jesus Cristo">
+    <meta name="author" content="Espaço Pentecostal">
+    <meta property="og:title" content="Espaço Pentecostal - Igreja da Família Unicista em Curitiba">
+    <meta property="og:description" content="Participe do Espaço Pentecostal, uma igreja unicista em Curitiba que acredita na família, no batismo com o Espírito Santo, e na volta de Jesus Cristo.">
+    <meta property="og:image" content="https://espacopentecostal.vercel.app/imagens/logo.jpeg">
+    <meta property="og:url" content="https://espacopentecostal.vercel.app">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Espaço Pentecostal - Igreja da Família Unicista em Curitiba">
+    <meta name="twitter:description" content="Conheça o Espaço Pentecostal em Curitiba e participe das nossas atividades religiosas. Contate-nos via WhatsApp!">
+    <meta name="twitter:image" content="https://espacopentecostal.vercel.app/imagens/logo.jpeg">
+    <title>Espaço Pentecostal</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos gerais */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg,   #00BFFF, #363636, #00BFFF, #0000CD);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+         .sobre h2{
+            color: white;
+            font-size: 1.2em;
+         }
+         .sobre p{
+            color: white;
+            font-size: 1.3em;
+         }
+
+        header {
+            background: linear-gradient(45deg,  #00BFFF, #363636, #00BFFF, #0000CD);
+            color: #fff;
+            padding: 10px 0;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header img {
+            height: 140px; /* Tamanho ajustado para o logo */
+            margin-left: 20px;
+            border-radius: 10%;
+            border: 1px solid white;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 20px;
+            padding: 10px 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+        }
+
+        .banner {
+            background-image: url('./images/banner.png');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 180px 0;
+            margin-top: 70px; /* Espaço para o header fixo */
+        }
+
+        .banner h1 {
+            font-size: 3em;
+            margin-bottom: 30px;
+            color: white;
+        }
+
+        .banner p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            color: white;
+        }
+
+        .whatsapp-button {
+            display: inline-block;
+            background-color: #25D366;
+            color: #fff;
+            font-size: 1.1em;
+            font-weight: bold;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .whatsapp-button:hover {
+            background-color: #128C7E;
+        }
+
+        /* Estilos adicionais conforme necessário */
+        section {
+            padding: 60px 0;
+        }
+
+        footer {
+            background: linear-gradient(45deg,   #00BFFF, #363636, #00BFFF, #0000CD);
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .social-links {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 10px;
+        }
+
+        .social-links li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .social-links li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .social-links li a:hover {
+            color: #bbb;
+        }
+
+        /* Estilos responsivos */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            header img {
+                height: 150px; /* Aumentando o tamanho do logo na versão mobile */
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+            nav ul li a{
+                font-size: 1.3em;
+                font-weight: bold;
+            }
+              .banner {
+        padding: 240px 20px 150px; /* Aumentar o padding superior */
+    }
+            .banner h1 {
+                font-size: 2.5em;
+            }
+            .banner{
+                margin-top: 140px;
+            }
+            .banner p {
+                font-size: 1.4em;
+                font-weight: bold;
+            }
+
+            .whatsapp-button {
+                font-size: 1.2em;
+                padding: 10px 20px;
+                font-weight: bold;
+            }
+            .whatsapp-button a{
+                font-weight: bold;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <img src="images/logo.jpeg" alt="Logo da Igreja Pentecostal">
+            <nav>
+                <ul>
+                    <li><a href="jovens.html">Grupo de Jovens</a></li>
+                     <li><a href="https://www.bibliaon.com/">Biblia & Salmos</a></li>
+                    <li><a href="upa.html">Projeto UPA</a></li>
+                    <li><a href="oracao.html">Pedido de Oração</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="inicio" class="banner">
+        <div class="container">
+            <h1>Espaço Pentecostal</h1>
+            <p>A Igreja da Familia Unicista</p>
+            <a href="https://wa.me/554187251723" class="whatsapp-button"><strong>Contate-nos via WhatsApp</strong></a>
+        </div>
+    </section>
+
+    <section id="sobre" class="sobre">
+        <div class="container">
+            <h2>QUEM SOMOS & SOBRE NÓS</h2>
+            <p><b>"...Entao, se levantou Pedro, com os onze; e, erguendo a voz, advertiu-os nestes termos: Varoes judeus e todos os habitantes de Jerusalém, tomai conhecimento disto e atentai nas minhas palavras; Estes homens nao estao embriagados, como vindes pensando, sendo esta a terceira hora do dia; Mas o que ocorre é o que foi dito por intermédio do profeta Joel: E acontecerá nos últimos dias, diz o Senhor, que derramarei do meu Espírito sobre toda a carne; vossos filhos e vossas filhas profetizarao, vossos jovens terao visoes, e sonharao vossos velhos; até sobre os meus servos e sobre as minhas servas derramarei do meu Espírito naqueles dias, e profetizarao..." "...Ouvindo eles estas coisas, compungiu-se-lhes o coraçao e perguntaram a Pedro e aos demais apóstolos: Que faremos, irmaos? Respondeu-lhes Pedro: Arrependei-vos, e cada um de vós seja batizado em nome de Jesus Cristo para remissao dos vossos pecados, e recebereis o dom do Espírito Santo; Pois para vós outros é a promessa, para vossos filhos e para todos os que ainda estao longe, isto é, para quantos o Senhor, nosso Deus, chamar; Com muitas outras palavras deu testemunho e exortava-os, dizendo: Salvai-vos desta geraçao perversa; Entao, os que lhe aceitaram a palavra foram batizados, havendo um acréscimo naquele dia de quase tres mil pessoas; E perseveravam na doutrina dos apóstolos e na comunhao, no partir do pao e nas oraçoes; Em cada alma havia temor; e muitos prodígios e sinais eram feitos por intermédio dos apóstolos; Todos os que creram estavam juntos e tinham tudo em comum..." (At.2:14-17 e 37-44 ARA)</br>
+
+            Desta forma seguiu o Espaço Pentecostal, com lutas, guerras, perseguiçoes, nosso Irmao Paulo que outrora fora perseguidor passa também a ser perseguido e torna-se entao um dos maiores missionário que a igreja já teve.</br>
+
+            Entre os casos podemos destacar, mortes por crucificação, decapitação, prisões etc...</br>
+
+            No último ano, mais precisamente em outubro de 2007, uma nova perseguição se deu, mais uma vez homens maus e corruptos, perseguiram mais uma vez o povo de Deus, como havia sido feito no passado, e um grupo se levantou juntamente com o Pastor e Doutor Wagner Teruel, saíram em defesa da Igreja de Mogi das Cruzes, e desta forma de igual maneira como no dia de Pentecostes, oficializa-se entao o Espaço Pentecostal, uma Igreja com o desejo de terminar com a hipocrisia e fazer uma Igreja onde a família, e os filhos sintam-se bem e tenham identidade com o Espaço Pentecostal.</br>
+
+            Assim nasceu o Espaço Pentecostal, fundamentada nos postulados apostólicos e na fé unicista, somos uma família que ama ao Senhor Jesus Cristo e que acredita no Batismo com o Espírito Santo, Batismo nas águas em o Nome de Jesus Cristo e que Jesus um dia virá buscar sua Igreja, nós estamos aguardando a sua preciosa apariçao; de igual modo que um dia nossos pais na fé, foram levados a declarar a independencia de Mogi das Cruzes e de vários lugares pelo Brasil.</br>
+
+            Atualmente o Espaço Pentecostal concentra seus trabalhos na cidade Curitiba no Estado do Paraná.</br>
+
+            </br>
+
+            Publicado por: Pr.Dr. Wagner Teruel.</br>
+            Nossos Pastores: Wagner Teruel, Flaviano Gabriel, Ari Schultz, Priscila Erthal.</br>
+                           
+
+
+            ONDE ESTAMOS: Rua Antônio Ernesto Antonieto 31 Vilas Oficinas - Curitiba - PR</br></p>
+            <h2>NO QUE ACREDITAMOS...</h2>
+            <p>Acreditamos que a Bíblia é inspirada pôr Deus; a infalível palavra de Deus. "...Pois toda a Escritura Sagrada é inspirada por Deus e é útil para ensinar a verdade, condenar o erro, corrigir as faltas e ensinar a maneira certa de viver..." (II Tm.3:16).</BR>
+
+ 
+
+            A Bíblia é a única autoridade dada pôr Deus que o homem possui; portanto, toda a doutrina, fé esperança e instruçao para a Igreja deve ser baseada na Bíblia, sendo coerente perfeitamente com ela. Deve ser estudada pôr todos os homens em toda a parte do mundo, e só pode ser perfeitamente compreendida pôr aqueles que sao ungidos pelo Espirito Santo (Lc.24:45).</br>
+
+            "...E temos, mui firme, a palavra dos profetas, a qual bem fazeis em estar atentos, como a uma luz que alumia em lugar escuro, até que o dia esclareça, e a estrela da alva apareça em vosso coraçao, sabendo primeiramente isto: que nenhuma profecia da Escritura é de particular interpretaçao; porque a profecia nunca foi produzida por vontade de homem algum, mas os homens santos de Deus falaram inspirados pelo Espírito Santo..." (II Pe.1:19-21).<b></p>
+
+        </div>
+    </section>
+
+    <!-- Outras seções como Eventos, Contato, etc. -->
+
+    <footer>
+        <div class="container">
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/espacopentecostal?mibextid=qi2Omg&rdid=CN5xt7NSAdvF1XGY&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2FQw2K4eEjnWtAxJ1s%2F%3Fmibextid%3Dqi2Omg">Facebook</a></li>
+                <li><a href="https://www.instagram.com/espacopentecostal?igsh=MWxrcHk2eGZkbDVtMw==">Instagram</a></li>
+                <li><a href="https://www.youtube.com/@espacopentecostal5016">YouTube</a></li>
+            </ul>
+            <p>&copy; 2024 Igreja Pentecostal. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
