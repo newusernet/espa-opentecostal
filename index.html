@@ -127,6 +127,38 @@
             background-color: #128C7E;
         }
 
+        /* Loader CSS */
+       .loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+}
+
+.loader {
+    border: 10px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 10px solid #3498db;
+    width: 80px;
+    height: 80px;
+    animation: spin 1.4s linear;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
         /* Estilos adicionais conforme necessário */
         section {
             padding: 60px 0;
@@ -215,6 +247,9 @@
     </style>
 </head>
 <body>
+    <div class="loader-container">
+        <div class="loader"></div>
+    </div>
     <header>
         <div class="container header-content">
             <img src="images/logo.jpeg" alt="Logo da Igreja Pentecostal">
@@ -285,6 +320,15 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+         window.addEventListener('load', function() {
+        setTimeout(function() {
+            const loaderContainer = document.querySelector('.loader-container');
+            if (loaderContainer) {
+                loaderContainer.style.display = 'none';
+            }
+        }, 1400); // 1.4 segundos
+    });
+    </script>
 </body>
 </html>
