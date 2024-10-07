@@ -1,1 +1,445 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Espaço Pentecostal - Igreja da Família Unicista em Curitiba, PR. Conheça nossa história, nossas crenças e participe das nossas atividades. Contate-nos via WhatsApp!">
+    <meta name="keywords" content="Espaço Pentecostal, Espaco pentecostal, Igreja Pentecostal,Igreja Espaço Pentecostal, Igreja Unicista, Curitiba, Família Cristã, Batismo, Espírito Santo, Fé Cristã, Jesus Cristo">
+    <meta name="author" content="Espaço Pentecostal">
+    <meta property="og:title" content="Espaço Pentecostal - Igreja da Família Unicista em Curitiba">
+    <meta property="og:description" content="Participe do Espaço Pentecostal, uma igreja unicista em Curitiba que acredita na família, no batismo com o Espírito Santo, e na volta de Jesus Cristo.">
+    <meta property="og:image" content="https://espacopentecostal.vercel.app/images/logo.jpeg">
+    <meta property="og:url" content="https://espacopentecostal.vercel.app">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Espaço Pentecostal - Igreja da Família Unicista em Curitiba">
+    <meta name="twitter:description" content="Conheça o Espaço Pentecostal em Curitiba e participe das nossas atividades religiosas. Contate-nos via WhatsApp!">
+    <meta name="twitter:image" content="https://espacopentecostal.vercel.app/images/logo.jpeg">
+    <title>Espaço Pentecostal</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos gerais */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg,  #00BFFF, #363636, #00BFFF, #0000CD);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .sobre h2{
+            color: white;
+            font-size: 1.2em;
+        }
+        
+        .sobre p{
+            color: white;
+            font-size: 1.3em;
+        }
+
+        header {
+            background: linear-gradient(45deg,  #00BFFF, #363636, #00BFFF, #0000CD);
+            color: #fff;
+            padding: 10px 0;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header img {
+            height: 140px; /* Tamanho ajustado para o logo */
+            margin-left: 20px;
+            border-radius: 10%;
+            border: 1px solid white;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 20px;
+            padding: 10px 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+        }
+
+        .banner {
+            background-image: url('./images/banner.png');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 180px 0;
+            margin-top: 70px; /* Espaço para o header fixo */
+        }
+
+        .banner h1 {
+            font-size: 3em;
+            margin-bottom: 30px;
+            color: white;
+        }
+
+        .banner p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            color: white;
+        }
+
+        .whatsapp-button {
+            display: inline-block;
+            background-color: #25D366;
+            color: #fff;
+            font-size: 1.1em;
+            font-weight: bold;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .whatsapp-button:hover {
+            background-color: #128C7E;
+        }
+
+        /* Loader CSS */
+        .loader-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+        }
+
+        .loader {
+            border: 10px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 10px solid #3498db;
+            width: 80px;
+            height: 80px;
+            animation: spin 1.4s linear;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Estilos adicionais conforme necessário */
+        section {
+            padding: 60px 0;
+        }
+
+        footer {
+            background: linear-gradient(45deg, #00BFFF, #363636, #00BFFF, #0000CD);
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .social-links {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 10px;
+        }
+
+        .social-links li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .social-links li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .social-links li a:hover {
+            color: #bbb;
+        }
+
+        /* Estilos para a galeria */
+        .galeria {
+            padding: 40px 0;
+            text-align: center;
+            background: linear-gradient(45deg, #000000, #363636, #00BFFF, #0000CD);
+        }
+
+        .galeria h2 {
+            color: white;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .galeria img {
+            width: 30%;
+            margin: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .galeria img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1001;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        .modal-content, .close {
+            animation: zoom 0.6s;
+        }
+
+        /* Estilos responsivos */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                align-items: center;
+
+            }
+            header{
+                position: relative;
+            }
+
+            header img {
+                height: 150px; /* Aumentando o tamanho do logo na versão mobile */
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+
+            nav ul li a {
+                font-size: 1.3em;
+                font-weight: bold;
+            }
+
+            .banner {
+                margin-top: -60px;
+            }
+
+            .banner h1 {
+                font-size: 2.5em;
+            }
+
+            
+
+            .banner p {
+                font-size: 1.4em;
+                font-weight: bold;
+            }
+
+            .whatsapp-button {
+                font-size: 1.2em;
+                padding: 10px 20px;
+                font-weight: bold;
+            }
+
+            .whatsapp-button a {
+                font-weight: bold;
+            }
+
+            .galeria img {
+                width: 60%;
+
+            }
+
+            .modal-content {
+                width: 60%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader-container">
+        <div class="loader"></div>
+    </div>
+
+    <header>
+        <div class="container header-content">
+            <a href="https://espacopentecostal.vercel.app"><img src="images/logo.jpeg" alt="Espaço Pentecostal"></a>
+            <nav>
+                <ul>
+                    <li><a href="jovens.html">Grupo de Jovens</a></li>
+                     <li><a href="https://www.bibliaon.com/">Biblia & Salmos</a></li>
+                    <li><a href="upa.html">Projeto UPA</a></li>
+                    <li><a href="oracao.html">Pedido de Oração</a></li>
+                    <li><a href="retiro.html">Nosso Retiro</a></li>
+                    <li><a href="https://www.itsteologia.com.br/">Escola Its Teologia</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="banner" id="home">
+        <div class="container">
+            <h1>Bem-vindo ao Espaço Pentecostal</h1>
+            <p>Uma igreja que acredita no poder da oração, na família, e na transformação através da Fé.</p>
+            <a href="https://wa.me/554187251723" class="whatsapp-button">Fale Conosco no WhatsApp</a>
+        </div>
+    </section>
+
+    <section class="sobre" id="sobre">
+        <div class="container">
+           
+            <h2>ONDE NÓS ESTAMOS</h2>
+            <P><b>Rua Antônio Ernesto Antonieto 31 Vilas Oficinas - Curitiba - PR<b></P><BR>
+            <h2>QUEM SOMOS & SOBRE NÓS</h2>
+            <p><b>"...Entao, se levantou Pedro, com os onze; e, erguendo a voz, advertiu-os nestes termos: Varoes judeus e todos os habitantes de Jerusalém, tomai conhecimento disto e atentai nas minhas palavras; Estes homens nao estao embriagados, como vindes pensando, sendo esta a terceira hora do dia; Mas o que ocorre é o que foi dito por intermédio do profeta Joel: E acontecerá nos últimos dias, diz o Senhor, que derramarei do meu Espírito sobre toda a carne; vossos filhos e vossas filhas profetizarao, vossos jovens terao visoes, e sonharao vossos velhos; até sobre os meus servos e sobre as minhas servas derramarei do meu Espírito naqueles dias, e profetizarao..." "...Ouvindo eles estas coisas, compungiu-se-lhes o coraçao e perguntaram a Pedro e aos demais apóstolos: Que faremos, irmaos? Respondeu-lhes Pedro: Arrependei-vos, e cada um de vós seja batizado em nome de Jesus Cristo para remissao dos vossos pecados, e recebereis o dom do Espírito Santo; Pois para vós outros é a promessa, para vossos filhos e para todos os que ainda estao longe, isto é, para quantos o Senhor, nosso Deus, chamar; Com muitas outras palavras deu testemunho e exortava-os, dizendo: Salvai-vos desta geraçao perversa; Entao, os que lhe aceitaram a palavra foram batizados, havendo um acréscimo naquele dia de quase tres mil pessoas; E perseveravam na doutrina dos apóstolos e na comunhao, no partir do pao e nas oraçoes; Em cada alma havia temor; e muitos prodígios e sinais eram feitos por intermédio dos apóstolos; Todos os que creram estavam juntos e tinham tudo em comum..." (At.2:14-17 e 37-44 ARA).</br>
+                <br>
+            Desta forma seguiu o Espaço Pentecostal, com lutas, guerras, perseguiçoes, nosso Irmao Paulo que outrora fora perseguidor passa também a ser perseguido e torna-se entao um dos maiores missionário que a igreja já teve.</br>
+
+            Entre os casos podemos destacar, mortes por crucificação, decapitação, prisões etc...</br>
+            <br>
+
+            Em anos passados, mais precisamente em outubro de 2007, uma nova perseguição se deu, mais uma vez homens maus e corruptos, perseguiram mais uma vez o povo de Deus, como havia sido feito no passado, e um grupo se levantou juntamente com o Pastor e Doutor Wagner Teruel, saíram em defesa da Igreja de Mogi das Cruzes, e desta forma de igual maneira como no dia de Pentecostes, oficializa-se entao o Espaço Pentecostal, uma Igreja com o desejo de terminar com a hipocrisia e fazer uma Igreja onde a família, e os filhos sintam-se bem e tenham identidade com o Espaço Pentecostal.</br>
+            <br>
+            Assim nasceu o Espaço Pentecostal, fundamentada nos postulados apostólicos e na fé unicista, somos uma família que ama ao Senhor Jesus Cristo e que acredita no Batismo com o Espírito Santo, Batismo nas águas em o Nome de Jesus Cristo e que Jesus um dia virá buscar sua Igreja, nós estamos aguardando a sua preciosa apariçao; de igual modo que um dia nossos pais na fé, foram levados a declarar a independencia de Mogi das Cruzes e de vários lugares pelo Brasil.</br>
+            <br>
+            Atualmente o Espaço Pentecostal concentra seus trabalhos na cidade Curitiba no Estado do Paraná.</br>
+
+
+            </br>
+            Nossos Pastores: Wagner Teruel, Flaviano Gabriel, Ari Schultz, Priscila Erthal, Inês Erthal.</br>
+                           </p>
+                           <br>
+            <h2>NO QUE ACREDITAMOS...</h2>
+            <p>Acreditamos que a Bíblia é inspirada pôr Deus; a infalível palavra de Deus. "...Pois toda a Escritura Sagrada é inspirada por Deus e é útil para ensinar a verdade, condenar o erro, corrigir as faltas e ensinar a maneira certa de viver..." (II Tm.3:16).</BR>
+
+            <br>
+
+            A Bíblia é a única autoridade dada pôr Deus que o homem possui; portanto, toda a doutrina, fé esperança e instruçao para a Igreja deve ser baseada na Bíblia, sendo coerente perfeitamente com ela. Deve ser estudada pôr todos os homens em toda a parte do mundo, e só pode ser perfeitamente compreendida pôr aqueles que sao ungidos pelo Espirito Santo (Lc.24:45).</br>
+            <br>
+            "...E temos, mui firme, a palavra dos profetas, a qual bem fazeis em estar atentos, como a uma luz que alumia em lugar escuro, até que o dia esclareça, e a estrela da alva apareça em vosso coraçao, sabendo primeiramente isto: que nenhuma profecia da Escritura é de particular interpretaçao; porque a profecia nunca foi produzida por vontade de homem algum, mas os homens santos de Deus falaram inspirados pelo Espírito Santo..." (II Pe.1:19-21).<br>
+            <br>
+            Publicado por: Pr.Dr. Wagner Teruel.</p>
+        </div>
+    </section>
+
+    <section class="galeria" id="galeria">
+        <div class="container">
+            <h2>Imagens dos Cultos</h2>
+            
+            <img src="c2.jpeg" alt="Imagem 2">
+            <img src="c3.jpeg" alt="Imagem 3">
+            <img src="c4.jpeg" alt="Imagem 3">
+            <img src="c5.jpeg" alt="Imagem 3">
+            <img src="c6.jpeg" alt="Imagem 3">
+            <img src="c7.jpeg" alt="Imagem 3">
+            <img src="c8.jpeg" alt="Imagem 3">
+            <img src="c9.jpeg" alt="Imagem 3">
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/espacopentecostal?mibextid=qi2Omg&rdid=CN5xt7NSAdvF1XGY&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2FQw2K4eEjnWtAxJ1s%2F%3Fmibextid%3Dqi2Omg">Facebook</a></li>
+                <li><a href="https://www.instagram.com/espacopentecostal?igsh=MWxrcHk2eGZkbDVtMw==">Instagram</a></li>
+                <li><a href="https://www.youtube.com/@espacopentecostal5016">YouTube</a></li>
+            <p>&copy; 2024 Espaço Pentecostal. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener("load", function () {
+            const loaderContainer = document.querySelector(".loader-container");
+            loaderContainer.style.display = "none";
+        });
+
+        // Scripts para modal
+        const images = document.querySelectorAll('.galeria img');
+        const modal = document.createElement('div');
+        modal.className = 'modal';
+        document.body.appendChild(modal);
+
+        images.forEach(image => {
+            image.addEventListener('click', () => {
+                const modalImg = document.createElement('img');
+                modalImg.className = 'modal-content';
+                modalImg.src = image.src;
+
+                modal.innerHTML = '';
+                modal.appendChild(modalImg);
+                modal.style.display = 'block';
+
+                modalImg.addEventListener('click', () => {
+                    modal.style.display = 'none';
+                });
+            });
+        });
+
+        modal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
 
